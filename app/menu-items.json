@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "path": "root",
+        "description": "Welcome",
+        "screen": "#welcome"
+    },
+    {
+        "id": 1,
+        "path": "root",
+        "description": "Calendar",
+        "screen": "#calendar"
+    }
+]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/desktop.css" media="screen and (min-width: 1200px)" async>
+    <link rel="stylesheet" href="./styles/style.css" media="screen and (max-width: 500px)" async>  
+</head>
+<body>
+    <pragma-appbar>
+        <svg xmlns="http://www.w3.org/2000/svg" width="73" height="16" viewBox="0 0 73 16">
+            <g fill="none" fill-rule="evenodd" transform="translate(-2 -2)">
+                <path fill="#FFF" d="M3.27850821,14.4322645 L0.40201726,14.4322645 L0.40201726,1.5793719 C0.40201726,0.753190083 1.05323887,0.0349090909 1.87224705,0.0349090909 L3.44629478,0.0349090909 L9.26009932,9.92158678 L9.26009932,0.0349090909 L12.1365903,0.0349090909 L12.1365903,14.4322645 L9.09231275,14.4322645 L3.27850821,4.54452893 L3.27850821,14.4322645 Z M18.2398266,14.4322645 L18.2398266,1.5793719 C18.2398266,0.753190083 18.8899996,0.0349090909 19.7090078,0.0349090909 L21.1572156,0.0349090909 L21.1572156,5.62459504 L26.4676604,0.0349090909 L30.1788895,0.0349090909 L24.8223034,5.62459504 L30.6665192,14.4322645 L27.0979087,14.4322645 L22.8025726,8.08092562 L21.1572156,9.91841322 L21.1572156,14.4322645 L18.2398266,14.4322645 Z M46.6775524,14.4322645 L46.6775524,8.80026446 L42.0183291,0.0349090909 L45.3562332,0.0349090909 L48.1677068,5.58439669 L50.4747721,0.902347107 C50.7474253,0.330049587 51.187865,0.0349090909 51.8181133,0.0349090909 L54.2782838,0.0349090909 L49.6368879,8.80026446 L49.6368879,14.4322645 L46.6775524,14.4322645 Z M31.6837253,14.4322645 L31.6837253,1.5793719 C31.6837253,0.584991736 32.1661117,0.0560661157 33.1529064,0.0349090909 L41.0011231,0.0349090909 L41.0011231,2.53249587 L34.5591676,2.53249587 L34.5591676,5.62459504 L39.8696124,5.62459504 C39.8696124,5.62459504 39.8832451,7.9814876 39.8696124,8.0597686 L34.5591676,8.0597686 L34.5591676,11.7865785 L41.0011231,11.7865785 L41.0011231,14.4322645 L31.6837253,14.4322645 Z" transform="translate(19.954 2.727)"/>
+                <polygon points="0 0 19.954 0 19.954 20 0 20"/>
+                <g fill="#FFF" transform="translate(2.494 2.5)">
+                    <path d="M6.65142276,3.37090778 C4.75390461,3.75696639 3.32571138,5.43842776 3.32571138,7.45422602 C3.32571138,9.75541248 5.18692601,11.6208927 7.48285061,11.6208927 C9.49403957,11.6208927 11.1716561,10.1894263 11.556832,8.28755935 L14.9200319,8.28755935 C14.5064429,12.0375181 11.3344847,14.954226 7.48285061,14.954226 C3.35018633,14.954226 0,11.5963616 0,7.45422602 C0,3.59376464 2.91003865,0.414536907 6.65142276,2.79394563e-14 L6.65142276,3.37090778 Z"/>
+                    <path d="M8.31427846,0 L14.9657012,0 L14.9657012,6.66666667 L11.6399898,6.66666667 L11.6399898,3.33333333 L8.31427846,3.33333333 L8.31427846,0 Z"/>
+                </g>
+            </g>
+        </svg>
+    </pragma-appbar>
+
+    <pragma-menu hidden src="./app/menu-items.json"></pragma-menu>
+    
+    <div class="main-container">
+        <div class="main assistant-margin" role="main">
+            <view-container  id="main-view" class="main"></view-container>
+        </div>    
+    </div>
+
+    <route-listener view-container="main-view" src="./app/routes.json"></route-listener>
+
+    <script type="module">
+        import "./bootstrap/boot-events.js";
+        import "./bootstrap/boot-webworkers.js";
+        import "./bootstrap/boot-datasource-manager.js";
+        import "./bootstrap/boot-components.js";
+        import "./bootstrap/boot-translations.js";
+        import "./index.js";
+
+        import "./node_modules/pragma-views2/baremetal/components/view-container/view-container.js";
+        import "./node_modules/pragma-views2/baremetal/components/route-listener/route-listener.js";
+    </script>
+</body>
+</html>

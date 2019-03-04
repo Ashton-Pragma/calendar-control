@@ -1,0 +1,11 @@
+{
+  "": {
+    "view": "welcome"
+  },
+  "welcome": {
+    "view": "welcome"
+  },
+  "calendar": {
+    "view": "calendar"
+  }
+}
